@@ -60,3 +60,10 @@ Run `schema/schema.sql` **once against an empty database**; rerunning it require
 ## Disclosure and usage
 
 Educational portfolio example, **not university assessment answers**. University-provided materials, assignment questions, original database dumps and student identifiers are deliberately excluded. Please check applicable institutional academic-integrity rules before publishing any coursework-derived portfolio project. No original university files are redistributed. The project contains no license grant for third-party course materials.
+
+## Additional reporting queries
+
+- `queries/11-customer-activity-summary.sql`: per-customer bookings and event attendance, counted independently to prevent join multiplication.
+- `queries/12-monthly-program-demand.sql`: monthly program bookings and estimates based on listed prices, **not** realized revenue.
+
+These are newly authored, AI-assisted queries on the fictional schema, not original graded answers. MySQL execution remains to be verified independently.
