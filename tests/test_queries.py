@@ -11,6 +11,7 @@ def build_db():
     conn = sqlite3.connect(":memory:")
     conn.create_function("CONCAT", -1, lambda *values: "".join(str(v) for v in values))
     conn.create_function("YEAR", 1, lambda date: int(str(date)[:4]))
+    conn.create_function("MONTH", 1, lambda date: int(str(date)[5:7]))
     conn.create_function("CURDATE", 0, lambda: datetime.date.today().isoformat())
     conn.executescript((ROOT / "schema/schema.sql").read_text())
     conn.executescript((ROOT / "data/sample_data.sql").read_text())
